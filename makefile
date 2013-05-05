@@ -2,13 +2,23 @@
 	latexml --destination=$@ $<
 
 %.xhtml : %.xml
-	latexmlpost --split --splitpath="//ltx:bibliography |//ltx:appendix" --css=plr-style.css --graphicsmap=svg. --graphicsmap=png. --destination=$@ $<
+	latexmlpost --split --splitpath="//ltx:bibliography |//ltx:appendix" --css=plr-style.css --destination=$@ $<
+	cp plr-style.css $(@D)
+
+ibd/ibd-writeup.xhtml : ibd/ibd-writeup.tex
+	rm ibd/LaTeXML.cache
+	latexml --destination=ibd/ibd-writeup.xml $<
+	latexmlpost --split --splitpath="//ltx:bibliography |//ltx:appendix" --css=plr-style.css --destination=$@ ibd/ibd-writeup.xml
+	cp plr-style.css ibd
+	rm ibd/x*.svg
+	sed -i -e 's/"x1.svg"/"inversion-boxplots-long.svg"/' ibd/Ax2.xhtml
+	sed -i -e 's/"x2.svg"/"inversion-boxplots-long-coal.svg"/' ibd/Ax2.xhtml
 
 %.svg : %.pdf
 	inkscape $< --export-plain-svg=$@
 
 %.png : %.pdf
-	convert -density  $< -flatten $@
+	convert -density 300 $< -flatten $@
 
 ##
 # from WorkingWiki (lee worden)
