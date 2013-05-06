@@ -13,36 +13,36 @@
       <xsl:attribute name="data"><xsl:value-of select="f:url(@imagesrc)"/></xsl:attribute>
       <xsl:call-template name="add_id"/>
       <xsl:call-template name="add_attributes">
-	<xsl:with-param name="extra_style">
-	  <xsl:if test="@imagedepth">
-	    <xsl:value-of select="concat('vertical-align:-',@imagedepth,'px')"/>
-	  </xsl:if>
-	</xsl:with-param>
+        <xsl:with-param name="extra_style">
+          <xsl:if test="@imagedepth">
+            <xsl:value-of select="concat('vertical-align:-',@imagedepth,'px')"/>
+          </xsl:if>
+        </xsl:with-param>
       </xsl:call-template>
       <xsl:if test="@imagewidth">
-	<xsl:attribute name='width'>
-	  <xsl:value-of select="@imagewidth"/>
-	</xsl:attribute>
+        <xsl:attribute name='width'>
+          <xsl:value-of select="@imagewidth"/>
+        </xsl:attribute>
       </xsl:if>
       <xsl:if test="@imageheight">
-	<xsl:attribute name='height'>
-	  <xsl:value-of select="@imageheight"/>
-	</xsl:attribute>
+        <xsl:attribute name='height'>
+          <xsl:value-of select="@imageheight"/>
+        </xsl:attribute>
       </xsl:if>
       <xsl:choose>
-	<xsl:when test="@description">
-	  <xsl:attribute name='alt'>
-	    <xsl:value-of select="@description"/>
-	  </xsl:attribute>
-	</xsl:when>
-	<xsl:when test="../ltx:figure/ltx:caption">
-	  <xsl:attribute name='alt'>
-	    <xsl:value-of select="../ltx:figure/ltx:caption/text()"/>
-	  </xsl:attribute>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:attribute name='alt'></xsl:attribute> <!--required; what else? -->
-	</xsl:otherwise>
+        <xsl:when test="@description">
+          <xsl:attribute name='alt'>
+            <xsl:value-of select="@description"/>
+          </xsl:attribute>
+        </xsl:when>
+        <xsl:when test="../ltx:figure/ltx:caption">
+          <xsl:attribute name='alt'>
+            <xsl:value-of select="../ltx:figure/ltx:caption/text()"/>
+          </xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name='alt'></xsl:attribute> <!--required; what else? -->
+        </xsl:otherwise>
       </xsl:choose>
       <xsl:apply-templates select="." mode="begin"/>
       <xsl:apply-templates select="." mode="end"/>
