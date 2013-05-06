@@ -11,12 +11,10 @@ p.ref {
 	margin:15px 5px 15px 5px;
 }
 p.date { 
-	font-family: Optima; Helvetica; Arial;
 	font-size:12px; 	
 	margin:-12px 0px 0px 5px;	
 }
 p.comments { 
-	font-family: Optima; Helvetica; Arial;
 	font-size:12px; 	
 	margin:10px 0px -10px 5px;	
 }
@@ -30,7 +28,6 @@ p.emph {
 	margin:15px 15px 15px 15px;
 }
 p.updated {
-	font-family: Optima; Helvetica; Arial;
 	font-weight:300;	
 	font-size:14px; 
 	margin:25px 0px 5px 5px;
@@ -92,7 +89,7 @@ img.center {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
-img.ltx_graphics { 
+img.ltx_graphics, object.ltx_graphics  { 
     float:right; 
     padding:18px 10px 10px 18px; 
     max-width: 70%;
@@ -281,7 +278,7 @@ body {
     clear: both;
 }
 
-td.ltx_subgraphics img {
+td.ltx_subgraphics img, td.ltx_subgraphics object  {
     padding: 0;
     max-width: 100%;
 }
