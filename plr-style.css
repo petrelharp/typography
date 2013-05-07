@@ -5,6 +5,7 @@ p {
 
 p.ltx_p {
 	max-width:800px;
+    display: block;
 }
 
 p.ref { 
@@ -14,14 +15,7 @@ p.date {
 	font-size:12px; 	
 	margin:-12px 0px 0px 5px;	
 }
-p.comments { 
-	font-size:12px; 	
-	margin:10px 0px -10px 5px;	
-}
-p.app {
-	margin:25px 15px 25px 15px;
-	text-align:center;
-}
+
 p.emph {
 	font-size:18px;
 	font-style:italic;
@@ -41,20 +35,9 @@ p.margin {
 	margin:15px 15px 15px 15px;
 	max-width:100%;
 }
-p.initial {
-	margin-top:25px;
-}
-
-p.ltx_p {
-    display: block;
-}
 
 b {
 	font-weight:600;
-}
-
-.small-font {
-	font-size:12px; 	
 }
 
 em {
@@ -66,21 +49,6 @@ a { color: #9A1A4D; text-decoration:none; }
 a img { border:0; }
 a:hover { text-decoration:underline; }
 
-canvas {
-	border: solid 2px #f0f0f0;
-	-webkit-border-radius:18px;
-	-moz-border-radius:18px;
-	border-radius:18px;	
-}
-canvas.offset {
-	float:right; 
-	margin:5px 0px 10px 30px;
-}
-canvas.center {   
-	display: block;   
-	margin-left: auto;   
-	margin-right: auto; 
-}
 
 img.center {   
 	display: block;
@@ -95,22 +63,8 @@ img.ltx_graphics, object.ltx_graphics  {
     max-width: 70%;
     height: auto;
 }
-img.tile { 
-	float:right; 
-	margin:5px;
-	-webkit-border-radius:7px;
-	-moz-border-radius:7px;
-	border-radius:7px;
-}
-img.offset {
-	float:right; 
-	margin:5px 0px 10px 30px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;	
-}
 
-H1, H2, H3 {
+h1, h2, h3 {
 	font-family: Optima; Helvetica; Arial;
 	margin-left:5px;
 	margin-top:25px;	
@@ -121,21 +75,21 @@ H1, H2, H3 {
     margin-left: -1em;
 }
 
-H1 {
+h1 {
 	font-weight:300;
 }
 
-H2 {
+h2 {
 	font-size:22px; 
 	font-weight:300;
 }
 
-H3 {
+h3 {
 	font-size:16px; 	
 	font-weight:600;
 }
 
-H4 {
+h4 {
 	font-size:14px; 	
 	font-weight:600;
 }
@@ -164,9 +118,6 @@ h4.ltx_title_paragraph {
     display: block;
 }
 
-.off { color:inherit; }
-.highlight { color:#3283A0; }
-
 body {
 	min-width:100%;
 	max-width:100%;	
@@ -178,41 +129,6 @@ body {
 	color:#333333;	
 }
 
-#header { 
-	min-width:600px;
-	max-width:1000px;
-	margin-left: auto; 
-	margin-right: auto;
-	padding: 30px 30px 35px 30px; 
-	position:relative; 
-	font-family: Optima, Helvetica; Arial;	
-	font-weight: 300;
-}
-#header .title { 
-	left:0px;
-	top:25px;
-	font-size:34px; 
-	position:relative; 
-}
-#header .subtitle { 
-	position:absolute;
-	left:20px;
-	top:17px;
-	font-size:21px; 
-}
-#header .mainnav { 
-	position:absolute;
-	right:30px;
-	top:45px;
-	font-size:21px; 
-}
-#header .icons {
-	position:absolute;
-	right:30px;
-	top:17px;
-	font-size:14px; 
-	font-weight: 400;	
-}
 
 .ltx_document { 
 	min-width:600px;
@@ -224,18 +140,6 @@ body {
 	line-height:23px; 	
 	font-family: georgia; serif;
 	font-weight:300;
-}
-
-#banner {
-	min-width:100%;
-	max-width:100%;
-	background-color: white;
-	border-top-style:solid;
-	border-top-width:2px;
-	border-top-color:#f0f0f0;
-	border-bottom-style:solid;
-	border-bottom-width:2px;	
-	border-bottom-color:#ededed;	
 }
 
 .ltx_rule {
@@ -342,10 +246,6 @@ table.ltx_tabular tr:nth-child(even) td{
   font-style:italic;
 }
 
-td.td11 {
-  padding:2px 15px 2px 15px;
-}
-
 img.math-display {
 	vertical-align:middle;
 }
@@ -353,26 +253,3 @@ img.math-display {
 hr {
   border: 0;                                                                     
 }
-
-.endfigure {
-  border: 0;
-}
-
-.item {
-  margin:5px;
-  float:left;
-  overflow:hidden;
-  position:relative;
-}
-
-/* Minimum 320 */
-.small {
-  width:320px;
-}
-
-/* Minimum 440 */
-.large {
-  width:1000px;
-}
-
-
