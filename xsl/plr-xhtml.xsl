@@ -8,7 +8,7 @@
     extension-element-prefixes="func f"
     exclude-result-prefixes = "ltx func f">
 
-  <xsl:template match="ltx:graphics">
+    <xsl:template match="ltx:graphics[substring(f:url(@imagesrc),string-length(@imagesrc)-2,3) = 'svg']">
     <xsl:element name="object" namespace="{$html_ns}">
       <xsl:attribute name="data"><xsl:value-of select="f:url(@imagesrc)"/></xsl:attribute>
       <xsl:call-template name="add_id"/>

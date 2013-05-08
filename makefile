@@ -2,7 +2,7 @@
 	latexml --destination=$@ $<
 
 %.xhtml : %.xml
-	latexmlpost --css=plr-style.css --javascript=adjust-svg.js --destination=$@ $<
+	latexmlpost --css=plr-style.css --javascript=adjust-svg.js --stylesheet=xsl/LaTeXML-all-xhtml.xsl --destination=$@ $<
 	-cp plr-style.css $(@D)
 	-cp adjust-svg.js $(@D)
 
