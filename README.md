@@ -13,7 +13,7 @@ To get my figures nice, I used inkscape to make all my pdfs into svgs; you can d
 
 The css was modeled after [trvrb's](https://github.com/trvrb) really [nice looking paper](http://www.trevorbedford.com/canalization/index.html).
 
-Help me, or better yet, (Bruce Miller)[http://dlmf.nist.gov/LaTeXML/contact.html] improve this stuff!
+Help me, or better yet, [Bruce Miller](http://dlmf.nist.gov/LaTeXML/contact.html) improve this stuff!
 
 References:
 * [LaTeXML](http://dlmf.nist.gov/LaTeXML/)
