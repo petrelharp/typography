@@ -114,9 +114,11 @@ h4.ltx_title_paragraph {
     margin-left: .5em;
 }
 
+/* this is not working
 .ltx_item .ltx_tag + .ltx_para > .ltx_p {
     display: block;
 }
+*/
 
 body {
 	min-width:100%;
@@ -130,7 +132,7 @@ body {
 }
 
 
-.ltx_document { 
+.ltx_page_content { 
 	min-width:600px;
 	max-width:1000px;
 	margin-left: auto; 
@@ -196,8 +198,12 @@ table.ltx_equationgroup, table.ltx_equation {
 	padding:10px 30px 15px 30px; 
 }
 
-table.ltx_tabular { 
+.ltx_table table.ltx_tabular { 
     float:right; 
+    margin-left: 10px;
+}
+
+table.ltx_tabular { 
     padding:18px 10px 10px 18px; 
     max-width: 70%;
 }
